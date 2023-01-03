@@ -14,4 +14,5 @@ async def root():
 
 @app.post("/predict/")
 def predict(item: Item):
+    '''Generate text'''
     return pipe(item.text)[0]['generated_text']
